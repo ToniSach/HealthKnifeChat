@@ -12,7 +12,7 @@ controller.chat = (req, res) => {
             console.log('No se pudo conectar con la DB');
         }
         const datas = req.body;
-        console.log(datas);
+        //console.log(datas);
         const datos = Object.values(datas);
         const correo1 = datos[0];
         const correou = correo1.toString();
@@ -22,14 +22,14 @@ controller.chat = (req, res) => {
         const sntcecorreou = "aes_encrypt('"+correou+"','BraceBlack')";
         //const pass = "1234567890";
         const sntcepass = "aes_encrypt('"+pass+"','BraceBlack')"
-        console.log(sntcecorreou);
-        console.log(sntcepass);
+        //console.log(sntcecorreou);
+        //console.log(sntcepass);
         const sentencesql = "SELECT nombreUsuario, idTipoUsuario FROM `usuario` WHERE " + 
         "correoUsuario = " + sntcecorreou + "AND passwordUsuario = " + sntcepass;
         conn.query(sentencesql, (errfind, rows) => {
-            console.log(rows);
+            //console.log(rows);
             if(rows[0] != null){
-                console.log(rows);
+                //console.log(rows);
                 const nam = Object.values(rows[0]);
                 //console.log(nam);
                 const name = nam[0];
@@ -37,7 +37,7 @@ controller.chat = (req, res) => {
                 const names = name.toString();
                 const typea = nam[1];
                 const typeas = typea.toString();
-                console.log('name: ' + names +'type: '+ typea);
+                //console.log('name: ' + names +'type: '+ typea);
                 try {
                     var hm = typeas;
                     if (hm == "3"){
