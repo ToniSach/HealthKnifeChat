@@ -1,11 +1,11 @@
 var socket = io.connect('https://healtknifechat.herokuapp.com/', { 'forceNew': true });
 //escuchamos el evento messages
-// data tendr� el array de mensajes  que env�a el servidor
+// data tendrá el array de mensajes  que envía el servidor
 socket.on('messages', function(data) {  
   //console.log(data);
   render(data);
 })
-// esta funci�n se encarga de pintar en el HTML los mensajes
+// esta función se encarga de pintar en el HTML los mensajes
 function render (data) {  
   var html = data.map(function(elem, index) {
     return(`<div>
