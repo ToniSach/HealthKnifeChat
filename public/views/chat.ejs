@@ -13,9 +13,10 @@
     }
     body {
       height: 100%;
-      background-repeat: no-repeat;
+      background:#06192e;
+      /*background-repeat: no-repeat;
       background: url(https://images7.alphacoders.com/682/thumb-1920-682674.jpg) no-repeat center center fixed;
-      background-size: 100% 100%;
+      */background-size: 100% 100%;
 
     }
 
@@ -48,13 +49,16 @@
 		var contenedorshat = document.getElementById('contshat');
 		contenedorshat.scrollTo(0, contenedorshat.scrollHeight);
   }
+  function SalirSes() {
+		window.history.go(-2);
+	}
   </script>
 </head>  
 <body class="row align-items-center justify-content-center" onload="mover()">
   <header class="headss">
     <br>
     <h3 class="hola">HealtKnife-Chat</h3>
-    <a href="/" class="btn btn-danger" id="tusi" >Cerrar Sesión</a>
+    <a class="btn btn-danger" id="tusi" onclick="SalirSes()" >Cerrar Sesión</a>
 </header>  
 <div class="container">
   <h5></h5>
