@@ -32,11 +32,11 @@ app.use(express.static(path.join(__dirname, '/public')));
 //conexion con la db
 
 app.use(myConnection(mysql, {
-  host : 'bjiyr3qhqrxvdbp2qftw-mysql.services.clever-cloud.com',
-  user: 'u6r2gyppbzxnzhki',
-  password: '7yklTzVUXIZ7esGxA4YV',
-  port: 3306,
-  database: 'bjiyr3qhqrxvdbp2qftw'
+  host : 'bejjth2bbmwh0cshchxb-mysql.services.clever-cloud.com',
+  user: 'uqwfhl8r7awjda0e',
+  password: 'VGeitQLrJIc7bpUkm7Xw',
+  port: 20167,
+  database: 'bejjth2bbmwh0cshchxb'
 }, 'single'));
 
 app.use('/',chatRoutes);
